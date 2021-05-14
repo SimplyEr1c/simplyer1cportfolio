@@ -11,7 +11,7 @@ function App() {
 
       <Navbar />
 
-      <div className="flex flex-col justify-center gap-16  h-5/6 my-auto">
+      <div className="flex flex-col justify-center gap-12  h-5/6 my-auto">
         <Me />
         <Buttons />
       </div>
