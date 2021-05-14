@@ -1,26 +1,21 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faArtstation,
-    faInstagram,
-    faBehance,
-} from "@fortawesome/free-brands-svg-icons";
+import { faArtstation, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Buttons() {
     return (
-        <div className="d-grid gap-3 d-sm-flex justify-content-sm-center animate__animated animate__fadeInUp animate__delay-2s">
-            <a href="https://simplyer1c.artstation.com" type="button" className="btn artstation btn-lg px-3 mx-sm-3 ">
-                <FontAwesomeIcon icon={faArtstation} size="2x" color="black" />
-                <div>3D Art</div>
+
+        <div className=" flex justify-center text-center gap-6 ">
+
+            <a href="https://simplyer1c.artstation.com" target='_blank' rel="noreferrer" className="border-white border-8 p-5 rounded-3xl hover:bg-purple-300 font-bold shadow-lg">
+                <FontAwesomeIcon icon={faArtstation} size="4x" />
+                <p>3D Art</p>
             </a>
-            <a href="https://www.instagram.com/simplyer1c_art/" type="button" className="btn insta btn-lg px-3 mx-sm-3 ">
-                <FontAwesomeIcon icon={faInstagram} size="2x" color="black" />
-                <div>Brands, 2D/3D</div>
+            <a href="https://www.instagram.com/simplyer1c_art/" target='_blank' rel="noreferrer" className="border-white border-8 p-5 rounded-3xl hover:bg-purple-300 font-bold shadow-lg">
+                <FontAwesomeIcon icon={faInstagram} size="4x" />
+                <p>Brands, 2D/3D</p>
             </a>
-            <button href="" type="button" disabled className="btn behance btn-lg px-3 mx-sm-3">
-                <FontAwesomeIcon icon={faBehance} size="2x" color="black" />
-                <div>Soon.</div>
-            </button>
+            
         </div>
     )
 }
