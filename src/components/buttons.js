@@ -1,34 +1,21 @@
 import React from 'react';
-import Button from "./button"
-
-const buttonsData = [
-    {
-        id: 1,
-        title: "Artstation",
-        link: "https://simplyer1c.artstation.com",
-        Icon: 'artstationLogo',
-        description: "3D Art"
-    },
-
-    {
-        id: 2,
-        title: "Instagram",
-        link: "https://instagram.com/simplyer1c_art",
-        Icon: 'instagramLogo',
-        description: "Brands, Drawings, 3D"
-    },
-];
+import { faArtstation, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Buttons() {
     return (
-        <div className="container w-3/4 mx-auto">
-            <div className="grid sm:grid-cols-4 gap-8">
-                {
-                    buttonsData.map(({ title, link, Icon, description, id }) => (
-                        <Button title={title} link={link} Icon={Icon} description={description} key={id} />
-                    ))
-                }
-            </div>
+
+        <div className=" flex justify-center text-center gap-6 ">
+
+            <a href="https://simplyer1c.artstation.com" type="button" className="border-white border-8 p-5 rounded-3xl hover:bg-purple-300">
+                <FontAwesomeIcon icon={faArtstation} size="4x" />
+                <p>3D Art</p>
+            </a>
+            <a href="https://www.instagram.com/simplyer1c_art/" type="button" className="border-white border-8 p-5 rounded-3xl hover:bg-purple-300">
+                <FontAwesomeIcon icon={faInstagram} size="4x" />
+                <p>Brands, 2D/3D</p>
+            </a>
+            
         </div>
     )
 }
