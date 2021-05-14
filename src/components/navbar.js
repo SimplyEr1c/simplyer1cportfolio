@@ -16,8 +16,8 @@ function Navbar() {
                     <img src={logoDark} className=" block w-8 svg fill-current" alt="Logo" />
                     
                     <div className="inline-flex items-center gap-3">
-                        <a href="https://t.me/SimplyEr1c" target='_blank'> <FontAwesomeIcon icon={faTelegram} size="2x" className="hover:text-blue-200" /> </a>
-                        <a href="mailto:EricJTA@tuta.io" target='_blank'> <FontAwesomeIcon icon={faEnvelope} size="2x" className="hover:text-blue-200" /> </a>
+                        <a href="https://t.me/SimplyEr1c" target='_blank' rel="noreferrer"> <FontAwesomeIcon icon={faTelegram} size="2x" className="hover:text-blue-200" /> </a>
+                        <a href="mailto:EricJTA@tuta.io" target='_blank' rel="noreferrer"> <FontAwesomeIcon icon={faEnvelope} size="2x" className="hover:text-blue-200" /> </a>
                     </div>
                 </div>
             </div>
