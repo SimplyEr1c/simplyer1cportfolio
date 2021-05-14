@@ -6,7 +6,7 @@ function Me(params) {
   return (
     <div>
       <div className="container w-3/4 m-auto">
-        <div className="flex flex-col text-center items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 text-center items-center">
 
           <div className="items-center">
             <img src={er1mg} height="250" width="250" alt="Er1c" className="inline shadow-lg rounded-full border-white border-8" />
