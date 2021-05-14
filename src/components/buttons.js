@@ -1,10 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faArtstation,
-    faInstagram,
-    faBehance,
-} from "@fortawesome/free-brands-svg-icons";
 import Button from "./button"
 
 const buttonsData = [
@@ -12,7 +6,7 @@ const buttonsData = [
         id: 1,
         title: "Artstation",
         link: "https://simplyer1c.artstation.com",
-        faIcon: "faArtstation",
+        Icon: 'artstationLogo',
         description: "3D Art"
     },
 
@@ -20,17 +14,22 @@ const buttonsData = [
         id: 2,
         title: "Instagram",
         link: "https://instagram.com/simplyer1c_art",
-        faIcon: "faInstagram",
-        description: "Brands, Drawings"
+        Icon: 'instagramLogo',
+        description: "Brands, Drawings, 3D"
     },
 ];
 
 function Buttons() {
     return (
-      <h1>
-          hi
-      </h1>
-
+        <div className="container w-3/4 mx-auto">
+            <div className="grid sm:grid-cols-4 gap-8">
+                {
+                    buttonsData.map(({ title, link, Icon, description, id }) => (
+                        <Button title={title} link={link} Icon={Icon} description={description} key={id} />
+                    ))
+                }
+            </div>
+        </div>
     )
 }
 

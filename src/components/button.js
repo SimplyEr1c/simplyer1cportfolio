@@ -1,25 +1,24 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faArtstation,
-    faInstagram,
-    faBehance,
-} from "@fortawesome/free-brands-svg-icons";
+import PropTypes from "prop-types";
 
 
-function Button({title, link, faIcon, description }) {
+
+function Button({ title, link, faIcon, description, id }) {
     return (
-            <div className="bg-white dark:bg-gray-900 py-8 rounded-3xl shadow-lg flex items-center text-center">
-                <a href="#" className="">
-                <FontAwesomeIcon icon={faInstagram} size="4x" />
-                <div className="ml-6">
-                    <h1 className="text-2xl font-bold italic">Lorem Ipsum</h1>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </a>
-            </div>
-            
+        <a href={link} className="bg-white dark:bg-gray-800 py-8 rounded-3xl shadow-lg items-center text-center mt-5" key={id}>
+            <span className="ml-6 flex flex-col">
+                {faIcon}
+                <h1 className="text-2xl font-bold italic">{title}</h1>
+                <p>{description}</p>
+            </span>
+        </a>
     )
 }
 
+Button.propTypes = {
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    faIcon: PropTypes.string,
+    description: PropTypes.string
+};
 export default Button;
